@@ -1,0 +1,364 @@
+:root {
+  /* --theme-color: #0d6efd; */
+  --theme-color: #6610f2;
+  --color: #fff;  
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+.register-form{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-image:url('/assets/images/background/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.inner-registration-form{
+  width: 400px;
+  padding:30px;
+  border:1px solid blue;
+  background-color: #0000006b;
+}
+
+.message-box {
+  height: 275px;
+  width: 162px;
+  position: fixed;
+  z-index: 1;
+  bottom: -300px;
+  right: 10px;
+  background-color: #6610f278; 
+  /* padding-top: 60px; */
+  transition: 0.1s;
+  border-radius: 9px;
+  box-shadow: 0px 0px 11px 4px rgba(0,0,0,0.75);
+}
+ 
+.slidetoup{   
+  bottom: 15px;
+  transition: 2.0s;
+}
+
+.slidedown{  
+  bottom: -300px;
+  transition: 2.0s;
+}
+
+.inner-message-box{
+  padding: 10px;
+}
+
+/* The sidebar menu */
+  .sidebar {
+    height: 100%; /* 100% Full-height */
+    width:230px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 49px;
+    left:0;
+    background-color: var(--theme-color); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.1s;
+  }
+.toggle_sidebar{
+  width: 30px;
+}
+
+/* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color:  #131212;;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .active{
+    background-color: aliceblue;
+    border-radius: 29px 0px 0px 33px;
+    color:  #131212;
+    border-left:none;
+  }
+   .active:hover{
+    border-left:0px!important;
+    /* background-color: blue; */
+  }
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #0e0d0d;
+    border-left:3px solid blue;
+
+  }
+  .rotate{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    color:blue;
+  }
+  #angle{
+    position:absolute;
+    top:12px;
+    right: 10px;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  .main_content_side {
+    margin-left:230px;
+  }
+
+  .section-header{
+    position:fixed;
+    width:100%;
+    background-color: var(--theme-color);
+    z-index: 1030;
+    top: 0;
+    display: flex;
+    right:0px;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+  }
+  .logo-header {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+.logo-header img{
+  width: 100px;
+  }
+  .section-header1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+  .box-2{
+    display: flex;
+    margin-right: 20px;
+}
+
+.bell-icon{
+  margin-right: 15px;
+  font-size: 29px;
+}
+  .main-content{
+
+    margin-top:100px;
+  }
+
+.sm-open-button{
+  display: none;
+}
+
+/****************************
+Title Area style
+*************************/
+.title-area{
+  margin-top: 57px;
+  background: #00000091;
+  color: white;
+  padding: 5px;
+}
+.title-area p{
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.package_button{
+  background-color: var(--theme-color);
+  color: var(--color);
+  border: none;
+  padding: 5px 10px;
+}
+/****************************
+  End Title Area style
+*************************/
+/***********************
+  Auto Complete
+***********************/
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  height: 90px;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+/************************
+End of Auto complete
+***********************/
+/* Add package Area */
+.add_new_row{
+  cursor: pointer;
+  background-color: var(--theme-color);
+  color: var(--color)!important;
+  padding: 0px 5px 4px 5px;
+  top: 35%;
+  left: 3px;
+  position: absolute;
+}
+.delete_row{
+  cursor: pointer;
+  background-color: var(--theme-color);
+  color: var(--color)!important;
+  padding: 0px 5px 4px 5px;
+  top: 35%;
+  right: 3px;
+  position: absolute;
+}
+.ban{
+  cursor: pointer;
+  background-color: var(--theme-color);
+  color: var(--color)!important;
+  padding: 0px 5px 4px 5px;
+  top: 35%;
+  right: 3px;
+  position: absolute;
+}
+.append-choose-image{
+  position: relative;
+  border:1px solid;
+  width: max-content;
+}
+.append-choose-image label{
+  position: absolute;
+  background: #000000a3;
+  height: 25px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+.custom-table-append thead tr th{
+  padding: 5px;
+  background-color: var(--theme-color);
+  color: var(--color);
+  text-align: center;
+  font-size: 14px;
+}
+.custom-table-append tbody tr td{
+  padding: 0px;  
+  text-align: center;  
+}
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+    .main_content_side {
+      margin-left:0px;
+
+    }
+ }
+ @media screen and (max-width: 768px) {
+
+  .main_content_side {
+    margin-left:0px;
+  }
+
+
+}
+@media screen and (max-width: 468px) {
+
+  .sm-open-button{
+    display: block;
+    padding: 10px;
+  }
+  .box-1{
+    display: none;
+  }
+  .toggle_sidebar{
+    width: 0px;
+  }
+
+}
+
+/***************************
+  Package Edit btn Style
+**************************/
+.edit-pkg{
+  cursor: pointer;
+}
